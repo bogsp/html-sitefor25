@@ -1,0 +1,92 @@
+/* Home Page */
+
+#hero {
+    height: 90vh;
+    max-height: 1080px;
+    width: 100%;
+    text-align: center;
+    @include grid;
+    @include grid-center;
+    background: url('/images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    p {
+        @include breakpoint-down("md") {
+            padding: $md;
+        }
+    }
+    .cta-btn {
+        @include btn($secondary,
+        true);
+    }
+}
+
+#blurbs {
+    padding-top: $xl;
+    .grid-content {
+        text-align: center;
+    }
+    .blurb-container {
+        gap: $md;
+        .card {
+            overflow: hidden;
+            @include bg-dark;
+            @include noSpace;
+            padding-bottom: $lg;
+        }
+        .blurb-title {
+            @include highlight;
+            padding: $md $lg $sm;
+        }
+        .blurb-content {
+            @include light;
+            padding: $sm $lg;
+        }
+        .blurb-btn {
+            @include btn($primary);
+        }
+    }
+}
+
+#gallery {
+    margin-top: $md;
+    padding: $xl 0 0;
+    @include bg-highlight;
+    .grid-content {
+        text-align: center;
+        h1 {
+            @include dark;
+        }
+    }
+    .gallery-container {
+        padding: $md 0 0;
+        width: 100%;
+        @include grid;
+        @include grid-col(4);
+        @include breakpoint-down("md") {
+            @include grid-col(2);
+        }
+        @include breakpoint-up("xxl") {
+            @include grid-col(8);
+        }
+        img {
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+#pricing {
+    .grid-content {
+        padding: $xl 0;
+        text-align: center;
+        .blurb-container {
+            gap: $md;
+            .card {
+                @include bg-light;
+            }
+            .blurb-btn {
+                @include btn($secondary);
+            }
+        }
+    }
+}

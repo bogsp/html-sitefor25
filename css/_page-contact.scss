@@ -1,0 +1,12 @@
+#contact {
+    .grid-content {
+        min-height: 64.8vh;
+        @include grid-2(false);
+        gap: $lg;
+        .info-container {
+            h2 {
+                padding: $sm 0 $md;
+            }
+        }
+    }
+}

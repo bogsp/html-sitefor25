@@ -1,0 +1,16 @@
+#about {
+    .grid-content {
+        min-height: 64.8vh;
+        @include grid-2;
+        gap: $lg;
+        .about-content {
+            @include type-col-gap(2, $md);
+        }
+        .about-profile {
+            height: 100%;
+            @include breakpoint-down("sm") {
+                height: auto;
+            }
+        }
+    }
+}
