@@ -1,16 +1,21 @@
 // Register Plugins
 gsap.registerPlugin(ScrollTrigger);
 
+// Durations
+const durationFast = .5;
+const durationMid = .8;
+const durationSlow = 1;
+
 // Utilities Animations
 const fadeIn = (element, visibility = 1) => {
     element.style.display = 'block';
-    gsap.fromTo(element, { opacity: 0 }, { opacity: visibility, duration: .3 });
+    gsap.fromTo(element, { opacity: 0 }, { opacity: visibility, duration: durationFast });
 }
 
 const fadeOut = (element, visibility = 1) => {
     gsap.fromTo(element, { opacity: visibility }, {
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         onComplete: () => {
             element.style.display = 'none';
         }
@@ -28,10 +33,10 @@ const fadeFromTop = (element, target, del = 0, sf = 'center') => {
         },
         y: -100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: {
             from: sf,
-            amount: .3
+            amount: durationFast
         },
         delay: del
     })
@@ -47,10 +52,10 @@ const fadeFromBottom = (element, target, del = 0, sf = 'center') => {
         },
         y: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: {
             from: sf,
-            amount: .3
+            amount: durationFast
         },
         delay: del
     })
@@ -66,10 +71,10 @@ const fadeFromLeft = (element, target, del = 0, sf = 'center') => {
         },
         x: -100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: {
             from: sf,
-            amount: .3
+            amount: durationFast
         },
         delay: del
     })
@@ -85,10 +90,10 @@ const fadeFromRight = (element, target, del = 0, sf = 'center') => {
         },
         x: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: {
             from: sf,
-            amount: .3
+            amount: durationFast
         },
         delay: del
     })
@@ -109,12 +114,12 @@ const closeMobileNav = gsap.timeline({ paused: true });
 function screenReady() {
     if (screen.width <= 425) {
         openMobileNav
-            .from('.overlay', .5, { x: 250, opacity: 0 })
-            .from('.nav-links a', .5, { x: 100, opacity: 0, stagger: .1 }, "-= .2");
+            .from('.overlay', durationMid, { x: 250, opacity: 0 })
+            .from('.nav-links a', durationMid, { x: 100, opacity: 0, stagger: .1 }, "-= .2");
         closeMobileNav
-            .to('.overlay', .8, { x: 250, opacity: 0 })
-            .to('.nav-links a', .3, { x: 100, stagger: .1 }, "-= .2")
-            .to('.nav-links a', .2, { opacity: 0 }, "-= .5");
+            .to('.overlay', durationSlow, { x: 250, opacity: 0 })
+            .to('.nav-links a', durationFast, { x: 100, stagger: .1 }, "-= .2")
+            .to('.nav-links a', .2, { opacity: 0 }, "-= durationMid");
         hamburger.addEventListener('click', () => {
             if (header.classList.contains('closed') && !header.classList.contains('open')) {
                 openMobileNav.restart();
@@ -130,15 +135,15 @@ function screenReady() {
         gsap.from(logo, {
             y: -100,
             opacity: 0,
-            duration: .3
+            duration: durationFast
         });
         gsap.from(navLinks, {
             y: -100,
             opacity: 0,
-            duration: .3,
+            duration: durationFast,
             stagger: {
                 from: 'center',
-                amount: .3
+                amount: durationFast
             }
         })
     }
@@ -156,7 +161,7 @@ if (footer) {
         },
         x: -100,
         opacity: 0,
-        duration: .3
+        duration: durationFast
     })
     const social = footer.querySelector('.social').children;
     gsap.from(social, {
@@ -167,10 +172,10 @@ if (footer) {
         },
         x: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: {
             from: 'end',
-            amount: .3
+            amount: durationFast
         }
     })
 }
@@ -212,8 +217,8 @@ if (hero) {
     gsap.from(heroChildren, {
         y: 100,
         opacity: 0,
-        duration: .3,
-        stagger: .3
+        duration: durationFast,
+        stagger: durationFast
     })
 }
 
@@ -223,7 +228,7 @@ if (blurbsContainer) {
     const blurbsText = blurbsContainer.querySelectorAll('.fade-from-bottom');
     fadeFromBottom(blurbsText, blurbsContainer);
     const blurbs = blurbsContainer.querySelectorAll('.blurb-container .blurb');
-    fadeFromBottom(blurbs, blurbsContainer, .8);
+    fadeFromBottom(blurbs, blurbsContainer, durationSlow);
 }
 
 // gallery Section
@@ -232,7 +237,7 @@ if (galleryContainer) {
     const galleryText = galleryContainer.querySelectorAll('.fade-from-bottom');
     fadeFromBottom(galleryText, galleryContainer);
     const gallery = galleryContainer.querySelectorAll('.gallery-container .gallery-img');
-    fadeFromBottom(gallery, galleryContainer, .3);
+    fadeFromBottom(gallery, galleryContainer, durationFast);
 }
 
 // pricing Section
@@ -241,7 +246,7 @@ if (pricingContainer) {
     const pricingText = pricingContainer.querySelectorAll('.fade-from-bottom');
     fadeFromBottom(pricingText, pricingContainer);
     const pricing = pricingContainer.querySelectorAll('.blurb-container .blurb')
-    fadeFromBottom(pricing, pricingContainer, .3);
+    fadeFromBottom(pricing, pricingContainer, durationFast);
 }
 
 // About Section
@@ -251,21 +256,21 @@ if (aboutContainer) {
     gsap.from(aboutSpecial, {
         x: -100,
         opacity: 0,
-        duration: .3
+        duration: durationFast
     })
     const aboutContent = aboutContainer.querySelector('.about-content').children;
     gsap.from(aboutContent, {
         y: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: .2,
-        delay: .5
+        delay: durationMid
     })
     const aboutProfile = aboutContainer.querySelector('.about-profile');
     gsap.from(aboutProfile, {
         x: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
     })
 }
 
@@ -276,21 +281,21 @@ if (contactContainer) {
     gsap.from(contactSpecial, {
         x: -100,
         opacity: 0,
-        duration: .3
+        duration: durationFast
     })
     const contactContent = contactContainer.querySelector('.contact-content').children;
     gsap.from(contactContent, {
         y: 100,
         opacity: 0,
-        duration: .3,
+        duration: durationFast,
         stagger: .2,
-        delay: .5
+        delay: durationMid
     })
     const contactForm = contactContainer.querySelector('.form-container');
     gsap.from(contactForm, {
         x: 100,
         opacity: 0,
-        duration: .3
+        duration: durationFast
     })
 }
 // Run all ready functions
