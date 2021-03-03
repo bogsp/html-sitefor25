@@ -27,8 +27,8 @@ const fadeOut = (element, visibility = 1) => {
 const fadeFromTop = (element, target, del = 0, sf = 'center') => {
     gsap.from(element, {
         scrollTrigger: {
-            trigger: target,
-            start: 'top center',
+            trigger: element,
+            start: 'top bottom',
             toggleActions: 'restart pause resume reverse'
         },
         y: -100,
@@ -46,8 +46,8 @@ const fadeFromTop = (element, target, del = 0, sf = 'center') => {
 const fadeFromBottom = (element, target, del = 0, sf = 'center') => {
     gsap.from(element, {
         scrollTrigger: {
-            trigger: target,
-            start: 'top center',
+            trigger: element,
+            start: 'top bottom',
             toggleActions: 'restart pause resume reverse'
         },
         y: 100,
@@ -65,8 +65,8 @@ const fadeFromBottom = (element, target, del = 0, sf = 'center') => {
 const fadeFromLeft = (element, target, del = 0, sf = 'center') => {
     gsap.from(element, {
         scrollTrigger: {
-            trigger: target,
-            start: 'top center',
+            trigger: element,
+            start: 'top bottom',
             toggleActions: 'restart pause resume reverse'
         },
         x: -100,
@@ -84,7 +84,7 @@ const fadeFromLeft = (element, target, del = 0, sf = 'center') => {
 const fadeFromRight = (element, target, del = 0, sf = 'center') => {
     gsap.from(element, {
         scrollTrigger: {
-            trigger: target,
+            trigger: element,
             start: 'top bottom',
             toggleActions: 'restart pause resume reverse'
         },
