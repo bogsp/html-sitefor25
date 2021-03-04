@@ -1,7 +1,10 @@
 /* Header */
 
 .header-container {
+    width: 100%;
+    position: absolute;
     @include bg-secondary;
+    z-index: 10;
 }
 
 header {
@@ -55,6 +58,9 @@ header {
             a {
                 font-size: 2rem;
                 color: $light;
+                &:not(:last-child) {
+                    margin: 0;
+                }
             }
         }
     }

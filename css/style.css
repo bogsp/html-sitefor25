@@ -374,7 +374,10 @@ textarea:focus + .label-textarea::after {
 
 /* Header */
 .header-container {
+  width: 100%;
+  position: absolute;
   background-color: #505a66;
+  z-index: 10;
 }
 
 header {
@@ -461,6 +464,9 @@ header .nav-links a:not(:last-child) {
   header .nav-links a {
     font-size: 2rem;
     color: #eeeeee;
+  }
+  header .nav-links a:not(:last-child) {
+    margin: 0;
   }
 }
 
