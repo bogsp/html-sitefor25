@@ -442,8 +442,8 @@ header .nav-links a:not(:last-child) {
 
 @media (max-width: 759px) {
   header .nav-links {
-    height: 50%;
-    width: 90%;
+    height: 60vh;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -456,7 +456,7 @@ header .nav-links a:not(:last-child) {
     position: absolute;
     top: 10vh;
     right: 0;
-    z-index: 3;
+    z-index: 5;
   }
   header .nav-links a {
     font-size: 2rem;
@@ -478,9 +478,9 @@ header .overlay {
 @media (max-width: 759px) {
   header .overlay {
     display: block;
-    height: 90%;
-    width: 90%;
-    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
   }
 }
 
@@ -610,16 +610,9 @@ footer .social a:not(:last-child) {
 #hero .cta-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  color: #505a66;
-  background-color: transparent;
-  border: 2px #505a66 solid;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-#hero .cta-btn:hover {
   background-color: #505a66;
   color: #eeeeee;
+  margin-top: 3rem;
 }
 
 #blurbs {
@@ -628,6 +621,11 @@ footer .social a:not(:last-child) {
 
 #blurbs .grid-content {
   text-align: center;
+}
+
+#blurbs .grid-content p {
+  width: 60%;
+  margin: auto;
 }
 
 #blurbs .blurb-container {
@@ -813,6 +811,16 @@ footer .social a:not(:last-child) {
 
 #contact .grid-content .info-container h2 {
   padding: 1rem 0 3rem;
+}
+
+@media (max-width: 759px) {
+  #contact .grid-content .info-container {
+    text-align: center;
+  }
+}
+
+#contact .grid-content .card {
+  padding: 5rem;
 }
 
 /* Custom Styles*/

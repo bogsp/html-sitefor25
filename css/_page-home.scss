@@ -15,8 +15,8 @@
         }
     }
     .cta-btn {
-        @include btn($secondary,
-        true);
+        @include btn($secondary);
+        margin-top: $md;
     }
 }
 

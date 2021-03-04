@@ -7,6 +7,12 @@
             h2 {
                 padding: $sm 0 $md;
             }
+            @include breakpoint-down("sm") {
+                text-align: center;
+            }
+        }
+        .card {
+            padding: $lg;
         }
     }
 }
