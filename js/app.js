@@ -91,7 +91,6 @@ hamburger.classList.add('closed');
 const navLinksContainer = header.querySelector('.nav-links');
 fadeOut(navLinksContainer, 1, 0);
 const navLinks = navLinksContainer.children;
-// gsap.to(navLinks, { opacity: 0, duration: 0 });
 
 const overlay = header.querySelector('.overlay');
 gsap.to(overlay, { x: 100, opacity: 0, duration: 0 });
@@ -122,7 +121,7 @@ if (screen.width <= 425) {
         }
     });
 } else {
-    gsap.to(navLinks, { opacity: 1, duration: 0 });
+    fadeIn(navLinksContainer, 1, 0, 'flex');
     gsap.from(header, { y: -150, duration: durationFast, delay: .5 })
 }
 

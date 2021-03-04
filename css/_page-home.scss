@@ -1,6 +1,7 @@
 /* Home Page */
 
 #hero {
+    margin-top: 10vh;
     height: 90vh;
     max-height: 1080px;
     width: 100%;
@@ -24,6 +25,10 @@
     padding-top: $xl;
     .grid-content {
         text-align: center;
+        h1,
+        p {
+            padding-bottom: $md;
+        }
         p {
             width: 60%;
             margin: auto;
@@ -59,6 +64,7 @@
         text-align: center;
         h1 {
             @include dark;
+            padding-bottom: $md;
         }
     }
     .gallery-container {
@@ -83,6 +89,9 @@
     .grid-content {
         padding: $xl 0;
         text-align: center;
+        h1 {
+            padding-bottom: $md;
+        }
         .blurb-container {
             gap: $md;
             .card {

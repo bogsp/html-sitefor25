@@ -490,7 +490,7 @@ header .overlay {
   }
 }
 
-.open .hamburger span:first-child {
+.open span:first-child {
   -webkit-transform: translate(0, 0.5rem) rotate(45deg);
           transform: translate(0, 0.5rem) rotate(45deg);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -499,13 +499,13 @@ header .overlay {
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
-.open .hamburger span:nth-child(2) {
+.open span:nth-child(2) {
   opacity: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
 
-.open .hamburger span:last-child {
+.open span:last-child {
   -webkit-transform: translate(0, -1rem) rotate(-45deg);
           transform: translate(0, -1rem) rotate(-45deg);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -514,7 +514,7 @@ header .overlay {
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
-.closed .hamburger span:first-child {
+.closed span:first-child {
   -webkit-transform: translate(0, 0) rotate(0deg);
           transform: translate(0, 0) rotate(0deg);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -523,13 +523,13 @@ header .overlay {
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
-.closed .hamburger span:nth-child(2) {
+.closed span:nth-child(2) {
   opacity: 1;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
 
-.closed .hamburger span:last-child {
+.closed span:last-child {
   -webkit-transform: translate(0, 0) rotate(0deg);
           transform: translate(0, 0) rotate(0deg);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -596,6 +596,7 @@ footer .social a:not(:last-child) {
 
 /* Home Page */
 #hero {
+  margin-top: 10vh;
   height: 90vh;
   max-height: 1080px;
   width: 100%;
@@ -627,6 +628,11 @@ footer .social a:not(:last-child) {
 
 #blurbs .grid-content {
   text-align: center;
+}
+
+#blurbs .grid-content h1,
+#blurbs .grid-content p {
+  padding-bottom: 3rem;
 }
 
 #blurbs .grid-content p {
@@ -676,6 +682,7 @@ footer .social a:not(:last-child) {
 
 #gallery .grid-content h1 {
   color: #707070;
+  padding-bottom: 3rem;
 }
 
 #gallery .gallery-container {
@@ -737,6 +744,10 @@ footer .social a:not(:last-child) {
   text-align: center;
 }
 
+#pricing .grid-content h1 {
+  padding-bottom: 3rem;
+}
+
 #pricing .grid-content .blurb-container {
   gap: 3rem;
 }
@@ -750,6 +761,10 @@ footer .social a:not(:last-child) {
   padding: 1rem 2rem;
   background-color: #505a66;
   color: #eeeeee;
+}
+
+#about {
+  margin-top: 10vh;
 }
 
 #about .grid-content {
@@ -766,6 +781,10 @@ footer .social a:not(:last-child) {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+#about .grid-content .about-headline {
+  padding-bottom: 3rem;
 }
 
 #about .grid-content .about-content {
@@ -797,6 +816,10 @@ footer .social a:not(:last-child) {
   #about .grid-content .about-profile {
     height: auto;
   }
+}
+
+#contact {
+  margin-top: 10vh;
 }
 
 #contact .grid-content {

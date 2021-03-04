@@ -1,8 +1,12 @@
 #about {
+    margin-top: 10vh;
     .grid-content {
         min-height: 64.8vh;
         @include grid-2;
         gap: $lg;
+        .about-headline {
+            padding-bottom: $md;
+        }
         .about-content {
             @include type-col-gap(2, $md);
         }
