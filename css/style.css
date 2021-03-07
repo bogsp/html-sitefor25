@@ -690,47 +690,14 @@ footer .social a:not(:last-child) {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 759px) {
-  #gallery .gallery-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 1023px) {
-  #gallery .gallery-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1023px) and (max-width: 759px) {
-  #gallery .gallery-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
 @media (min-width: 2560px) {
   #gallery .gallery-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
-  }
-}
-
-@media (min-width: 2560px) and (max-width: 759px) {
-  #gallery .gallery-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (minmax(10%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
   }
 }
 
