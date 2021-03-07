@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
-/* Effects */
 /* Global Styles */
 *,
 *::before,
@@ -690,14 +689,14 @@ footer .social a:not(:last-child) {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 @media (min-width: 2560px) {
   #gallery .gallery-container {
-    -ms-grid-columns: (minmax(10%, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    -ms-grid-columns: (minmax(16vw, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(16vw, 1fr));
   }
 }
 

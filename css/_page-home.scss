@@ -70,11 +70,7 @@
     .gallery-container {
         padding: $md 0 0;
         width: 100%;
-        @include grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        @include breakpoint-up("xxl") {
-            grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
-        }
+        @include grid-auto('6');
         img {
             height: 100%;
             cursor: pointer;
