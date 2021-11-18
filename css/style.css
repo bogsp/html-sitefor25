@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #4979a7;
+  color: #00cf79;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
@@ -38,7 +38,7 @@ h2,
 h3 {
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: .5rem;
-  color: #4979a7;
+  color: #00cf79;
 }
 
 h1 {
@@ -52,7 +52,7 @@ h2 {
 }
 
 p {
-  color: #707070;
+  color: #417249;
   margin-bottom: 3rem;
 }
 
@@ -61,7 +61,7 @@ ul {
 }
 
 ul li {
-  color: #707070;
+  color: #417249;
   margin: 0 5rem;
 }
 
@@ -142,7 +142,7 @@ input[type=submit] {
   font-size: 1.6rem;
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #4979a7;
+  background-color: #00cf79;
   color: #eeeeee;
   cursor: pointer;
   -webkit-transition: opacity 300ms ease-in-out;
@@ -170,7 +170,7 @@ textarea:focus + .label-textarea .textarea-content {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   font-size: 1.4rem;
-  color: #4979a7;
+  color: #00cf79;
 }
 
 input[type=text]:focus + .label-text::after,
@@ -192,20 +192,20 @@ textarea:focus + .label-textarea::after {
   bottom: 0;
   left: 0;
   pointer-events: none;
-  border-bottom: 1px solid #707070;
+  border-bottom: 1px solid #417249;
 }
 
 .label-text::after,
 .label-textarea::after,
 .label-email::after {
   content: "";
-  color: #707070;
+  color: #417249;
   position: absolute;
   bottom: -1;
   left: 0;
   height: 100%;
   width: 100%;
-  border-bottom: 1px solid #4979a7;
+  border-bottom: 1px solid #00cf79;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: all 300ms ease;
@@ -269,14 +269,14 @@ textarea:focus + .label-textarea::after {
 }
 
 .blurb-container .blurb-icon {
-  color: #505a66;
+  color: #086400;
   font-size: 7rem;
 }
 
 .blurb-container .blurb-title {
   padding: 3rem 0 0 0;
   font-size: 3rem;
-  color: #505a66;
+  color: #086400;
 }
 
 @media (max-width: 1023px) {
@@ -298,7 +298,7 @@ textarea:focus + .label-textarea::after {
 .blurb-container .blurb-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #505a66;
+  background-color: #086400;
   color: #eeeeee;
 }
 
@@ -310,7 +310,7 @@ textarea:focus + .label-textarea::after {
   position: fixed;
   top: 0;
   opacity: .75;
-  background-color: #707070;
+  background-color: #417249;
   z-index: 5;
 }
 
@@ -375,7 +375,7 @@ textarea:focus + .label-textarea::after {
 .header-container {
   width: 100%;
   position: absolute;
-  background-color: #505a66;
+  background-color: #086400;
   z-index: 10;
 }
 
@@ -476,7 +476,7 @@ header .overlay {
   position: absolute;
   top: 10vh;
   right: 0;
-  background-color: #505a66;
+  background-color: #086400;
   pointer-events: none;
 }
 
@@ -540,7 +540,7 @@ header .overlay {
 /* Footer */
 .footer-container {
   height: 10vh;
-  background-color: #505a66;
+  background-color: #086400;
 }
 
 @media (max-width: 759px) {
@@ -618,7 +618,7 @@ footer .social a:not(:last-child) {
 #hero .cta-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #505a66;
+  background-color: #086400;
   color: #eeeeee;
   margin-top: 3rem;
 }
@@ -647,7 +647,7 @@ footer .social a:not(:last-child) {
 
 #blurbs .blurb-container .card {
   overflow: hidden;
-  background-color: #707070;
+  background-color: #417249;
   color: #eeeeee;
   padding: 0;
   margin: 0;
@@ -667,7 +667,7 @@ footer .social a:not(:last-child) {
 #blurbs .blurb-container .blurb-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #4979a7;
+  background-color: #00cf79;
   color: #eeeeee;
 }
 
@@ -682,7 +682,7 @@ footer .social a:not(:last-child) {
 }
 
 #gallery .grid-content h1 {
-  color: #707070;
+  color: #417249;
   padding-bottom: 3rem;
 }
 
@@ -727,7 +727,7 @@ footer .social a:not(:last-child) {
 #pricing .grid-content .blurb-container .blurb-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #505a66;
+  background-color: #086400;
   color: #eeeeee;
 }
 
