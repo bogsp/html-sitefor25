@@ -605,7 +605,7 @@ footer .social a:not(:last-child) {
   display: -ms-grid;
   display: grid;
   place-items: center center;
-  background: url("/images/hero.jpg") no-repeat center center;
+  background: url("../images/hero.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -756,6 +756,7 @@ footer .social a:not(:last-child) {
 }
 
 #about .grid-content .about-content {
+  width: 50vw;
   -webkit-column-count: 2;
           column-count: 2;
   -webkit-column-gap: 3rem;
@@ -819,8 +820,4 @@ footer .social a:not(:last-child) {
 #contact .grid-content .card {
   padding: 5rem;
 }
-
-/* Custom Styles*/
-/* About Pge*/
-/* Contact Pge*/
 /*# sourceMappingURL=style.css.map */
